@@ -1,0 +1,14 @@
+span {
+    color: ghostwhite;
+    font-size: 50px;
+}
+
+@media only screen and (max-width: 560px) {
+    span {
+      font-size: 25px;
+    };
+    img {
+        width: 30px;
+        height: 30px;
+    }
+  }
