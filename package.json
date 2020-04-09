@@ -11,6 +11,7 @@
     "mapbox-gl": "^1.9.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
+    "react-bootstrap-sidebar": "^0.0.1",
     "react-dom": "^16.13.1",
     "react-map-gl": "^5.2.3",
     "react-map-gl-geocoder": "^2.0.11",
