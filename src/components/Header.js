@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from 'react-bootstrap/Navbar'
 import logo from "../images/logo.png";
 import './Header.css'
 
@@ -7,18 +6,16 @@ import './Header.css'
 function Header() {
   return (
     <div className="header">
-       <Navbar bg="dark" variant="dark" expand="xl">
-        <Navbar.Brand>
+     <header>
           <img
             alt="app-logo"
             src={logo}
             width="70"
             height="70"
-            className="d-inline-block align-top"
-          />{' '}
-          <span>Restaurants Review</span>
-         </Navbar.Brand>
-       </Navbar>
+            className="app-logo"
+          />
+          <h1>Restaurants Review</h1>
+      </header>  
     </div>
   );
 }
