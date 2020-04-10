@@ -24,7 +24,7 @@ function RestaurantsMap() {
     const _onViewportChange = viewport => setViewPort({...viewport, transitionDuration: 3000 })
 
     return (
-        <div style={{ margin: '0 auto'}}>  
+        <div className="map">  
         <MapGL
           {...viewport}
           mapboxApiAccessToken={TOKEN}
