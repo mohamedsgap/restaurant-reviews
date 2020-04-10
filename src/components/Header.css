@@ -1,14 +1,15 @@
-span {
-    color: ghostwhite;
-    font-size: 50px;
+.header {
+  display: flex;
+  background-color: #1a1918;
+  height: 100px;
 }
 
-@media only screen and (max-width: 560px) {
-    span {
-      font-size: 25px;
-    };
-    img {
-        width: 30px;
-        height: 30px;
-    }
-  }
+h1 {
+  color: white;
+  float: right;
+  padding-top: 30px;
+}
+img {
+  margin: 20px;
+  float: left;
+}
