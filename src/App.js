@@ -12,7 +12,7 @@ function App() {
     <div className="App">
         <Header />
         <div className="Restaurants"> 
-        <RestaurantsMap />
+        <RestaurantsMap data={data}/>
         <RestaurantsList data={data}/>
         </div>
     </div>
