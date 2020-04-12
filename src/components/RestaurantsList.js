@@ -6,7 +6,7 @@ function RestaurantsList(props) {
 
   const restaurantList = restaurantsData.map(restaurant => {
     return (
-      <div key={restaurant.long} className="section">
+      <div key={restaurant.id} className="section">
         <h3>{restaurant.restaurantName}</h3>
         <span>{restaurant.address}</span>
         <div>
