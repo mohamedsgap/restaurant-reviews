@@ -4,16 +4,19 @@ import { MAPBOX_TOKEN } from "../utils/MAPBOX_TOKEN";
 import 'mapbox-gl/dist/mapbox-gl.css'
 import './RestaurantsMap.css'
 import user_position_marker from '../images/user-position-marker.png'
+import restaurant_position_marker from '../images/restaurant-position-marker.png'
 
 const TOKEN = MAPBOX_TOKEN
 
-function RestaurantsMap() {
+function RestaurantsMap(props) {
+  const restaurantsData = props.data;
+  
     const [viewport, setViewPort] = useState({
         width: "100%",
         height: 880,
         latitude: 30.822530,
         longitude: 30.819080,
-        zoom: 10
+        zoom: 15
     })
 
     const _onViewportChange = viewport => setViewPort({...viewport, transitionDuration: 3000 })
@@ -30,10 +33,23 @@ function RestaurantsMap() {
         latitude={30.822530}
         longitude={30.819080}
         >
-          <button className="user-marker">
+          <button className="marker">
             <img src={user_position_marker} alt="user-position-marker" />
           </button>
-        </Marker>  
+        </Marker>
+        {
+         restaurantsData.map(restaurant =>  (
+          <Marker
+          key={restaurant.id}
+          latitude={restaurant.lat}
+          longitude={restaurant.long}
+          >
+            <button className="marker">
+              <img src={restaurant_position_marker} alt="user-position-marker" />
+            </button>
+            </Marker>
+          )) 
+        }  
       </MapGL>
       </div>
     )
