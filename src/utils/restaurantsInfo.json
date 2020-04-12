@@ -1,9 +1,9 @@
 [
    {
-      "restaurantName":"Bronco",
-      "address":"39 Rue des Petites Écuries, 75010 Paris",
-      "lat":48.8737815,
-      "long":2.3501649,
+      "restaurantName":"Lahalibo",
+      "address":"RRC7+GC Kafr El-Zayat City, Kafr El-Zayat",
+      "lat":30.823025,
+      "long":30.8178345,
       "ratings":[
          {
             "stars":4,
@@ -16,10 +16,138 @@
       ]
    },
    {
-      "restaurantName":"Babalou",
-      "address":"4 Rue Lamarck, 75018 Paris",
-      "lat":48.8865035,
-      "long":2.3442197,
+      "restaurantName":"Nema",
+      "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
+      "lat":30.8235763,
+      "long":30.8139696,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"Tiny pizzeria next to Sacre Coeur!"
+         },
+         {
+            "stars":3,
+            "comment":"Meh, it was fine."
+         }
+      ]
+   },
+   {
+      "restaurantName":"La polenta ",
+      "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat",
+      "lat":30.8248086,
+      "long":30.8137926,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"Tiny pizzeria next to Sacre Coeur!"
+         },
+         {
+            "stars":3,
+            "comment":"Meh, it was fine."
+         }
+      ]
+   },
+   {
+      "restaurantName":"Teta Crepe",
+      "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
+      "lat":30.8251621,
+      "long":30.8130845,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"Tiny pizzeria next to Sacre Coeur!"
+         },
+         {
+            "stars":3,
+            "comment":"Meh, it was fine."
+         }
+      ]
+   },
+   {
+      "restaurantName":"MiX Crepe",
+      "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
+      "lat":30.8253383,
+      "long":30.8155012,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"Tiny pizzeria next to Sacre Coeur!"
+         },
+         {
+            "stars":3,
+            "comment":"Meh, it was fine."
+         }
+      ]
+   },
+   {
+      "restaurantName":"Makani",
+      "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
+      "lat":30.8259644,
+      "long":30.8122437,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"Tiny pizzeria next to Sacre Coeur!"
+         },
+         {
+            "stars":3,
+            "comment":"Meh, it was fine."
+         }
+      ]
+   },
+   {
+      "restaurantName":"Tiatro",
+      "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
+      "lat":30.8254396,
+      "long":30.8135,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"Tiny pizzeria next to Sacre Coeur!"
+         },
+         {
+            "stars":3,
+            "comment":"Meh, it was fine."
+         }
+      ]
+   },
+   {
+      "restaurantName":"Dahab",
+      "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
+      "lat":30.825306,
+      "long":30.8144213,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"Tiny pizzeria next to Sacre Coeur!"
+         },
+         {
+            "stars":3,
+            "comment":"Meh, it was fine."
+         }
+      ]
+   },
+   {
+      "restaurantName":"Dardasha",
+      "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
+      "lat":30.8252674,
+      "long":30.8138715,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"Tiny pizzeria next to Sacre Coeur!"
+         },
+         {
+            "stars":3,
+            "comment":"Meh, it was fine."
+         }
+      ]
+   },
+   {
+      "restaurantName":"Badaweia",
+      "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
+      "lat":30.823598,
+      "long":30.8181709,
       "ratings":[
          {
             "stars":5,
