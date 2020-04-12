@@ -1,1 +1,1 @@
-export const MAPBOX_TOKEN = 'pk.eyJ1IjoibW9oYW1lZHNnYXAiLCJhIjoiY2p2NWNpc2liMHJ1MzN5cDJ3dmFsbTI1aSJ9.s59PBCspitI9M_EHQ0hgeg'
+export const MAPBOX_TOKEN =  'pk.eyJ1IjoibW9oYW1lZHNnYXAiLCJhIjoiY2p2NWNpc2liMHJ1MzN5cDJ3dmFsbTI1aSJ9.s59PBCspitI9M_EHQ0hgeg'
