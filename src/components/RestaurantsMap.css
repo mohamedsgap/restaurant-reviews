@@ -2,12 +2,12 @@
     width: 75%;
     margin: '0 auto'
 }
-.user-marker{
+.marker{
     background: none;
     border: none;
     cursor: pointer;
 }
-.user-marker img {
+.marker img {
     width: 33px;
     height: 33px;
 }
