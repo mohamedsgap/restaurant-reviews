@@ -34,7 +34,7 @@ function RestaurantsList(props) {
           🍝🍲
         </span>
       </h2>
-      <div className="sublist">{restaurantList}</div>
+     <div className="sublist">{restaurantList}</div>
     </div>
   );
 }

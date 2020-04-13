@@ -2,6 +2,13 @@
     width: 25%;
     background-color: darksalmon;
 }
+
+.sublist {
+    height: 800px;
+    overflow-x: hidden; 
+    overflow-y: auto;
+}
+
 h2 {
     color: white;
     text-align: center;
