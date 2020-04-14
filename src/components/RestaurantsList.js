@@ -12,7 +12,7 @@ function RestaurantsList(props) {
         <div>
           {restaurant.ratings.map(restRate => {
             return (
-              <ul key={restRate.starts}>
+              <ul key={Math.random() * 100}>
                 <li>Rating: {restRate.stars} stars</li>
                 <li>Feedback: {restRate.comment}</li>
               </ul>
