@@ -11,3 +11,7 @@
     width: 33px;
     height: 33px;
 }
+.navigation-control {
+    position: absolute;
+    left: 0;
+}
