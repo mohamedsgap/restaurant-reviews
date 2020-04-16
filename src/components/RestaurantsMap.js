@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MapGL, { Marker } from "react-map-gl";
+import MapGL, { Marker, NavigationControl } from "react-map-gl";
 import { MAPBOX_TOKEN } from "../utils/MAPBOX_TOKEN";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./RestaurantsMap.css";
@@ -49,6 +49,10 @@ function RestaurantsMap(props) {
             </button>
           </Marker>
         ))}
+
+        <div className="navigation-control">
+          <NavigationControl />
+        </div>
       </MapGL>
     </div>
   );
