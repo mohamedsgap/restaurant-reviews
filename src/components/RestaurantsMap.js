@@ -72,8 +72,13 @@ function RestaurantsMap(props) {
             }}
           >
             <div>
-              <h3>{selectedRestaurant.restaurantName}</h3>
-              <p>This so cool restaurant number: {selectedRestaurant.id}</p>
+              <h3 className="restaurant-title">{selectedRestaurant.restaurantName}</h3>
+              {selectedRestaurant.ratings.map(rate => (
+                <ul key={Math.random()*100}>
+                <li>Feedback: {rate.comment}</li>
+                <li>{rate.stars} stars</li>
+                </ul>
+              ))}
               <img className="restaurant-image" src={selectedRestaurant.image} alt="restaurant-pic"/>
             </div>
           </Popup>
