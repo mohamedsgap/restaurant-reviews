@@ -16,6 +16,9 @@
     left: 0;
 }
 .restaurant-image {
-    width: 100px;
-    height: 100px;
+    width: 350px;
+    height: 200px;
+}
+.restaurant-title {
+    text-align: center;
 }
