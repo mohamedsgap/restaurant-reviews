@@ -5,6 +5,7 @@
       "address":"RRC7+GC Kafr El-Zayat City, Kafr El-Zayat",
       "lat":30.823025,
       "long":30.8178345,
+      "image": "../images/1.jpg",
       "ratings":[
          {
             "stars":4,
@@ -22,6 +23,7 @@
       "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
       "lat":30.8235763,
       "long":30.8139696,
+      "image": "../images/2.jpg",
       "ratings":[
          {
             "stars":5,
@@ -39,6 +41,7 @@
       "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat",
       "lat":30.8248086,
       "long":30.8137926,
+      "image": "../images/3.png",
       "ratings":[
          {
             "stars":5,
@@ -56,6 +59,7 @@
       "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
       "lat":30.8251621,
       "long":30.8130845,
+      "image": "../images/4.jpg",
       "ratings":[
          {
             "stars":5,
@@ -73,6 +77,7 @@
       "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
       "lat":30.8253383,
       "long":30.8155012,
+      "image": "../images/5.jpg",
       "ratings":[
          {
             "stars":5,
@@ -90,6 +95,7 @@
       "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
       "lat":30.8259644,
       "long":30.8122437,
+      "image": "../images/6.jpg",
       "ratings":[
          {
             "stars":5,
@@ -107,6 +113,7 @@
       "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
       "lat":30.8254396,
       "long":30.8135,
+      "image": "../images/7.jpg",
       "ratings":[
          {
             "stars":5,
@@ -124,6 +131,7 @@
       "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
       "lat":30.825306,
       "long":30.8144213,
+      "image": "../images/8.jpg",
       "ratings":[
          {
             "stars":5,
@@ -141,6 +149,7 @@
       "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
       "lat":30.8252674,
       "long":30.8138715,
+      "image": "../images/9.jpeg",
       "ratings":[
          {
             "stars":5,
@@ -158,6 +167,7 @@
       "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
       "lat":30.823598,
       "long":30.8181709,
+      "image": "../images/10.jpeg",
       "ratings":[
          {
             "stars":5,
