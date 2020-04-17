@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MapGL, { Marker, NavigationControl } from "react-map-gl";
+import MapGL, { Marker, NavigationControl, Popup } from "react-map-gl";
 import { MAPBOX_TOKEN } from "../utils/MAPBOX_TOKEN";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./RestaurantsMap.css";
@@ -19,6 +19,8 @@ function RestaurantsMap(props) {
     zoom: 16
   });
 
+  const [selectedRestaurant, setSelectedRestaurant] = useState(null);
+
   const _onViewportChange = viewport =>
     setViewPort({ ...viewport, transitionDuration: 3000 });
 
@@ -35,13 +37,20 @@ function RestaurantsMap(props) {
             <img src={user_position_marker} alt="user-position-marker" />
           </button>
         </Marker>
+
         {restaurantsData.map(restaurant => (
           <Marker
             key={restaurant.id}
             latitude={restaurant.lat}
             longitude={restaurant.long}
           >
-            <button className="marker">
+            <button
+              className="marker"
+              onClick={e => {
+                e.preventDefault();
+                setSelectedRestaurant(restaurant);
+              }}
+            >
               <img
                 src={restaurant_position_marker}
                 alt="user-position-marker"
@@ -53,6 +62,22 @@ function RestaurantsMap(props) {
         <div className="navigation-control">
           <NavigationControl />
         </div>
+
+        {selectedRestaurant ? (
+          <Popup
+            latitude={selectedRestaurant.lat}
+            longitude={selectedRestaurant.long}
+            onClose={() => {
+              setSelectedRestaurant(null);
+            }}
+          >
+            <div>
+              <h3>{selectedRestaurant.restaurantName}</h3>
+              <p>This so cool restaurant number: {selectedRestaurant.id}</p>
+              <img className="restaurant-image" src={selectedRestaurant.image} alt="restaurant-pic"/>
+            </div>
+          </Popup>
+        ) : null}
       </MapGL>
     </div>
   );
@@ -61,7 +86,6 @@ function RestaurantsMap(props) {
 export default RestaurantsMap;
 
 /*
-
 // GeoLocator component 
  <GeolocateControl
           style={geolocateStyle}
@@ -69,9 +93,6 @@ export default RestaurantsMap;
           trackUserLocation={true}
   />
 
-*/
-
-/*
 const geolocateStyle = {
     float: 'left',
     margin: '50px',
