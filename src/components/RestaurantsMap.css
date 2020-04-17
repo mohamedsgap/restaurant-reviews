@@ -15,3 +15,7 @@
     position: absolute;
     left: 0;
 }
+.restaurant-image {
+    width: 100px;
+    height: 100px;
+}
