@@ -8,7 +8,6 @@ function RestaurantsList(props) {
     return (
       <div key={restaurant.id} className="section">
         <h3>{restaurant.restaurantName}</h3>
-        <span>{restaurant.address}</span>
         <div>
           {restaurant.ratings.map(restRate => {
             return (
