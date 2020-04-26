@@ -20,10 +20,14 @@ ul {
 
 .box-image {
   width: 150px;
-  height: 150px;
+  height: 125px;
   border-radius: 33px;
 }
 
 .rest-box {
   display: flex;
+}
+
+.review-btn {
+    padding-bottom: 5px;
 }
