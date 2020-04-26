@@ -2,6 +2,7 @@ import React from "react";
 import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
 import "./RestaurantBox.css";
+import RestaurantReview from "./RestaurantReview";
 
 function RestaurantBox(data) {
   const boxData = data.data;
@@ -33,6 +34,9 @@ function RestaurantBox(data) {
               );
             })}
           </div>
+        </div>
+        <div className="review-btn">
+          <RestaurantReview />
         </div>
       </div>
     );
