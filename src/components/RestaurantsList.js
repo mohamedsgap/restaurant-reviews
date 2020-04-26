@@ -1,26 +1,9 @@
 import React from "react";
 import "./RestaurantsList.css";
+import RestaurantBox from './RestaurantBox'
 
 function RestaurantsList(props) {
   const restaurantsData = props.data;
-
-  const restaurantList = restaurantsData.map(restaurant => {
-    return (
-      <div key={restaurant.id} className="section">
-        <h3>{restaurant.restaurantName}</h3>
-        <div>
-          {restaurant.ratings.map(restRate => {
-            return (
-              <ul key={Math.random() * 100}>
-                <li>Rating: {restRate.stars} stars</li>
-                <li>Feedback: {restRate.comment}</li>
-              </ul>
-            );
-          })}
-        </div>
-      </div>
-    );
-  });
 
   return (
     <div className="list">
@@ -33,7 +16,7 @@ function RestaurantsList(props) {
           🍝🍲
         </span>
       </h2>
-     <div className="sublist">{restaurantList}</div>
+     <RestaurantBox data={restaurantsData}/>
     </div>
   );
 }
