@@ -1,6 +1,6 @@
 .list {
     width: 25%;
-    background-color: darksalmon;
+    background-color: #fc92c9;
 }
 
 .sublist {
@@ -22,7 +22,7 @@ h2 {
     padding-top: 10px;
     color: white;
     border: thick double yellow ;
-    background-color: cornflowerblue;
+    background-color: #de0d79;
     border-radius: 30px;
     text-align: center;
 }
