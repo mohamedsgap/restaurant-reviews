@@ -3,29 +3,10 @@
     background-color: #fc92c9;
 }
 
-.sublist {
-    height: 800px;
-    overflow-x: hidden; 
-    overflow-y: auto;
-}
-
 h2 {
     color: white;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 20px;
-}
-
-.section {
-    margin-top: 10px;
-    padding-top: 10px;
-    color: white;
-    border: thick double yellow ;
-    background-color: #de0d79;
-    border-radius: 30px;
-    text-align: center;
-}
-ul {
-    list-style: none;
 }
