@@ -5,6 +5,7 @@ import MapGL, { Marker, NavigationControl, Popup } from "react-map-gl";
 import { MAPBOX_TOKEN } from "../utils/MAPBOX_TOKEN";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./RestaurantsMap.css";
+import ExtraRestaurants from './ExtraRestaurants'
 import user_position_marker from "../images/user-position-marker.png";
 import restaurant_position_marker from "../images/restaurant-position-marker.png";
 
@@ -16,8 +17,8 @@ function RestaurantsMap(props) {
   const [viewport, setViewPort] = useState({
     width: "100%",
     height: 880,
-    latitude: 30.82253,
-    longitude: 30.81908,
+    latitude: 30.7970511,
+    longitude: 30.9987288,
     zoom: 16
   });
 
@@ -34,7 +35,7 @@ function RestaurantsMap(props) {
         mapStyle="mapbox://styles/mapbox/dark-v8"
         onViewportChange={_onViewportChange}
       >
-        <Marker latitude={30.82253} longitude={30.81908}>
+        <Marker latitude={30.7970511} longitude={30.9987288}>
           <button className="marker">
             <img src={user_position_marker} alt="user-position-marker" />
           </button>
@@ -85,6 +86,7 @@ function RestaurantsMap(props) {
             </div>
           </Popup>
         ) : null}
+        <ExtraRestaurants />
       </MapGL>
     </div>
   );
@@ -92,17 +94,3 @@ function RestaurantsMap(props) {
 
 export default RestaurantsMap;
 
-/*
-// GeoLocator component 
- <GeolocateControl
-          style={geolocateStyle}
-          positionOptions={{enableHighAccuracy: true}}
-          trackUserLocation={true}
-  />
-
-const geolocateStyle = {
-    float: 'left',
-    margin: '50px',
-    padding: '10px'
-  }
-*/
