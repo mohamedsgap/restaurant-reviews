@@ -3,8 +3,8 @@
       "restaurantName":"Lahalibo",
       "id": 1,
       "address":"RRC7+GC Kafr El-Zayat City, Kafr El-Zayat",
-      "lat":30.823025,
-      "long":30.8178345,
+      "lat": 30.7969013,
+      "long": 30.9980475,
       "image": "https://www.ask-aladdin.com/images/famous-restaurants_ph3.jpg",
       "ratings":[
          {
@@ -21,8 +21,8 @@
       "restaurantName":"Nema",
       "id": 2,
       "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
-      "lat":30.8235763,
-      "long":30.8139696,
+      "lat": 30.7966001,
+      "long": 30.9975835,
       "image": "https://static.trip101.com/paragraph_media/pictures/001/662/213/large/6493652353_497a9fdbf9_b.jpg?1560852803",
       "ratings":[
          {
@@ -39,8 +39,8 @@
       "restaurantName":"La polenta ",
       "id": 3,
       "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat",
-      "lat":30.8248086,
-      "long":30.8137926,
+      "lat": 30.7955264,
+      "long": 30.997098,
       "image": "https://www.osiristours.com/wp-content/uploads/2018/03/Egyptian_food_Koshary.jpg",
       "ratings":[
          {
@@ -57,8 +57,8 @@
       "restaurantName":"Teta Crepe",
       "id": 4,
       "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
-      "lat":30.8251621,
-      "long":30.8130845,
+      "lat": 30.7947592,
+      "long": 30.9972026,
       "image": "https://3.bp.blogspot.com/_jqHZBih7kik/TNHJAWWKGpI/AAAAAAAADaM/wfoNTzapKvU/s1600/Restaurants+in+Cairo.JPG",
       "ratings":[
          {
@@ -75,8 +75,8 @@
       "restaurantName":"MiX Crepe",
       "id": 5,
       "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
-      "lat":30.8253383,
-      "long":30.8155012,
+      "lat": 30.7940933,
+      "long": 30.9974118,
       "image": "https://media-cdn.tripadvisor.com/media/photo-s/11/e7/e4/43/osmanly-restaurant.jpg",
       "ratings":[
          {
@@ -93,8 +93,8 @@
       "restaurantName":"Makani",
       "id": 6,
       "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
-      "lat":30.8259644,
-      "long":30.8122437,
+      "lat": 30.7918625,
+      "long": 30.9987086,
       "image": "https://fastly.4sqi.net/img/general/699x268/WZIVQKQJUJFIAI23PL4XEAHBZWO2Y0AVI3A15W1FOVXL22FD.jpg",
       "ratings":[
          {
@@ -111,8 +111,8 @@
       "restaurantName":"Tiatro",
       "id": 7,
       "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
-      "lat":30.8254396,
-      "long":30.8135,
+      "lat": 30.7913556,
+      "long": 30.9983331,
       "image": "https://i.ytimg.com/vi/r0N4VU7q7F8/maxresdefault.jpg",
       "ratings":[
          {
@@ -129,8 +129,8 @@
       "restaurantName":"Dahab",
       "id": 8,
       "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
-      "lat":30.825306,
-      "long":30.8144213,
+      "lat": 30.7908908,
+      "long": 30.9982313,
       "image": "https://img.traveltriangle.com/blog/wp-content/uploads/2019/05/El-Masry1.jpg",
       "ratings":[
          {
@@ -147,8 +147,8 @@
       "restaurantName":"Dardasha",
       "id": 9,
       "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
-      "lat":30.8252674,
-      "long":30.8138715,
+      "lat": 30.7901117,
+      "long": 31.0013737,
       "image": "https://media-cdn.tripadvisor.com/media/photo-s/0a/58/0c/92/al-sahaby-lane-restaurant.jpg",
       "ratings":[
          {
@@ -165,8 +165,8 @@
       "restaurantName":"Badaweia",
       "id": 10,
       "address":"RRF8+CF Kafr El-Zayat, Kafr El-Zayat City, Kafr El-Zayat",
-      "lat":30.823598,
-      "long":30.8181709,
+      "lat": 30.7898502,
+      "long": 30.9992122,
       "image": "https://media-cdn.tripadvisor.com/media/photo-s/11/90/9d/0b/20171221-193956-largejpg.jpg",
       "ratings":[
          {
