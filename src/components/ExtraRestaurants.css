@@ -1,0 +1,12 @@
+.marker{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.marker img {
+    width: 33px;
+    height: 33px;
+}
+.restaurant-title {
+    text-align: center;
+}
