@@ -37,9 +37,8 @@ function ExtraRestaurants() {
       .catch(err => {
         console.log("ERROR HAS OCURED" + err);
       });
-  }, []);
+  },[]);
 
-  console.log(places);
   return (
     <div>
       {places.map(place => (
@@ -72,6 +71,7 @@ function ExtraRestaurants() {
               {selectedRestaurant.venue.name}
             </h3>
             <p>Address: {selectedRestaurant.venue.location.address}</p>
+            <img src={selectedRestaurant.venue.photos} alt="pic" />
           </div>
         </Popup>
       ) : null}
@@ -87,8 +87,7 @@ venue.location.lat/lng
 */
 
 /*
- const getPlaces = () => {
-        const END_POINT = 'https://api.foursquare.com/v2/venues/explore?';
+ const END_POINT = 'https://api.foursquare.com/v2/venues/explore?';
         const parameters = {
             client_id: CLIENT_ID,
             client_secret: CLIENT_SECRET,
@@ -96,7 +95,9 @@ venue.location.lat/lng
             ll: "30.82253, 30.81908",
             query: "food",
         }
-        axios.get(END_POINT + new URLSearchParams(parameters)).then(res => {
+  getPlaces = async () => {
+       
+       await axios.get(END_POINT + new URLSearchParams(parameters)).then(res => {
             //console.log(res.data.response.groups[0].items)
             setPlaces(
                 res.data.response.groups[0].items
