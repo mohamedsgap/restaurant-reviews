@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Rater from 'react-rater'
-import 'react-rater/lib/react-rater.css'
+import Rater from "react-rater";
+import "react-rater/lib/react-rater.css";
 import MapGL, { Marker, NavigationControl, Popup } from "react-map-gl";
 import { MAPBOX_TOKEN } from "../utils/MAPBOX_TOKEN";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./RestaurantsMap.css";
-import ExtraRestaurants from './ExtraRestaurants'
+import ExtraRestaurants from "./ExtraRestaurants";
 import user_position_marker from "../images/user-position-marker.png";
 import restaurant_position_marker from "../images/restaurant-position-marker.png";
 
@@ -75,22 +75,34 @@ function RestaurantsMap(props) {
             }}
           >
             <div>
-              <h3 className="restaurant-title">{selectedRestaurant.restaurantName}</h3>
+              <h3 className="restaurant-title">
+                {selectedRestaurant.restaurantName}
+              </h3>
               {selectedRestaurant.ratings.map(rate => (
-                <ul key={Math.random()*100}>
-                <li>Feedback: {rate.comment}</li>
-                <li> <Rater rating={rate.stars} total={5} interactive={false} /> </li>
+                <ul key={Math.random() * 100}>
+                  <li>Feedback: {rate.comment}</li>
+                  <li>
+                    {" "}
+                    <Rater
+                      rating={rate.stars}
+                      total={5}
+                      interactive={false}
+                    />{" "}
+                  </li>
                 </ul>
               ))}
-              <img className="restaurant-image" src={selectedRestaurant.image} alt="restaurant-pic"/>
+              <img
+                className="restaurant-image"
+                src={selectedRestaurant.image}
+                alt="restaurant-pic"
+              />
             </div>
           </Popup>
         ) : null}
-        <ExtraRestaurants />
+        <ExtraRestaurants places={props.places}/>
       </MapGL>
     </div>
   );
 }
 
 export default RestaurantsMap;
-
