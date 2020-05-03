@@ -4,8 +4,28 @@ import "react-rater/lib/react-rater.css";
 import "./RestaurantBox.css";
 import RestaurantReview from "./RestaurantReview";
 
-function RestaurantBox(data) {
-  const boxData = data.data;
+function RestaurantBox(props) {
+  const boxData = props.data;
+  const boxPlaces = props.places
+
+  const restaurantBoxPlaces = boxPlaces.map(place => {
+    return (
+      <div key={place.venue.id} className="section">
+        <h3 className="restaurant-title">{place.venue.name}</h3>
+        <h4 >Address: {place.venue.location.address}</h4>
+        <div className="rest-box">
+          <img
+            className="box-image"
+            src={place.venue.photos}
+            alt="restaurant-pic"
+          />
+        </div>
+        <div className="review-btn">
+          <RestaurantReview />
+        </div>
+      </div>
+    );
+  });
 
   const restaurantBoxData = boxData.map(restaurant => {
     return (
@@ -42,7 +62,16 @@ function RestaurantBox(data) {
     );
   });
 
-  return <div className="sublist">{restaurantBoxData}</div>;
+  return (
+    <div className="sublist">
+      <div>
+        {restaurantBoxData}
+      </div>
+      <div>
+        {restaurantBoxPlaces}
+      </div>
+    </div>
+  )
 }
 
 export default RestaurantBox;
