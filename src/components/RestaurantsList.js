@@ -16,7 +16,7 @@ function RestaurantsList(props) {
           🍝🍲
         </span>
       </h2>
-     <RestaurantBox data={restaurantsData}/>
+     <RestaurantBox data={restaurantsData} places={props.places} />
     </div>
   );
 }
