@@ -36,10 +36,13 @@ function MyVerticallyCenteredModal(props) {
 
 function RestaurantReview() {
   const [modalShow, setModalShow] = React.useState(false);
-
   return (
     <>
-      <Button variant="info" onClick={() => setModalShow(true)} className="review-btn">
+      <Button
+        variant="info"
+        onClick={() => setModalShow(true)}
+        className="review-btn"
+      >
         Submit a new review!
       </Button>
 

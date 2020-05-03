@@ -6,17 +6,18 @@ import RestaurantReview from "./RestaurantReview";
 
 function RestaurantBox(props) {
   const boxData = props.data;
-  const boxPlaces = props.places
+  const boxPlaces = props.places;
 
   const restaurantBoxPlaces = boxPlaces.map(place => {
+    //let imageURL = `${place.venue.categories[0].icon.prefix}${place.venue.categories[0].icon.suffix}`
     return (
       <div key={place.venue.id} className="section">
         <h3 className="restaurant-title">{place.venue.name}</h3>
-        <h4 >Address: {place.venue.location.address}</h4>
+        <h4>Address: {place.venue.location.address}</h4>
         <div className="rest-box">
           <img
             className="box-image"
-            src={place.venue.photos}
+            src={place.venue.photos.items}
             alt="restaurant-pic"
           />
         </div>
@@ -37,6 +38,7 @@ function RestaurantBox(props) {
             src={restaurant.image}
             alt="restaurant-pic"
           />
+
           <div className="rate-section">
             {restaurant.ratings.map(restRate => {
               return (
@@ -64,14 +66,10 @@ function RestaurantBox(props) {
 
   return (
     <div className="sublist">
-      <div>
-        {restaurantBoxData}
-      </div>
-      <div>
-        {restaurantBoxPlaces}
-      </div>
+      <div>{restaurantBoxData}</div>
+      <div>{restaurantBoxPlaces}</div>
     </div>
-  )
+  );
 }
 
 export default RestaurantBox;
