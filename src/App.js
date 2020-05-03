@@ -37,7 +37,7 @@ function App() {
       <Header />
       <div className="Restaurants">
         <RestaurantsMap data={data} places={places} />
-        <RestaurantsList data={data} />
+        <RestaurantsList data={data} places={places}/>
       </div>
     </div>
   );
