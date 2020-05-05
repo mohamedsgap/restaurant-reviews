@@ -6,7 +6,7 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-function MyVerticallyCenteredModal(props) {
+function Anything(props) {
   return (
     <Modal
       {...props}
@@ -24,7 +24,7 @@ function MyVerticallyCenteredModal(props) {
         <Form>
           <Form.Group controlId="exampleForm.ControlTextarea1">
             <Form.Label>Write your review for this restaurant</Form.Label>
-            <Form.Control as="textarea" rows="3" />
+            <Form.Control as="textarea" rows="2" />
           </Form.Group>
         </Form>
       </Modal.Body>
@@ -47,7 +47,7 @@ function RestaurantReview() {
         Submit a new review!
       </Button>
 
-      <MyVerticallyCenteredModal
+      <Anything
         show={modalShow}
         onHide={() => setModalShow(false)}
       />
