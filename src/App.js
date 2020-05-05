@@ -6,8 +6,8 @@ import data from "./utils/restaurantsInfo.json";
 import RestaurantsMap from "./components/RestaurantsMap";
 import RestaurantsList from "./components/RestaurantsList";
 
-const CLIENT_ID = "SSC5IB0OXGTUVE2BZFOOXQKVDXSSYOKDVVHL4QZPLHB5UQKD";
-const CLIENT_SECRET = "DLWMODCEGNV0VXRDGR010N5F1WBWPNNTNIBH0S0PFG4Q4N2H";
+const CLIENT_ID = process.env.REACT_APP_CLIENT_ID; 
+const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
 
 function App() {
   const [places, setPlaces] = useState([]);
@@ -44,5 +44,3 @@ function App() {
 }
 
 export default App;
-
-// helper key for development purposes: AIzaSyDwOJoyyUXnGmeL0t0L6lVleb4cdKSWfZg
