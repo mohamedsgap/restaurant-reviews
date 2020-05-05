@@ -44,3 +44,5 @@ function App() {
 }
 
 export default App;
+
+// helper key for development purposes: AIzaSyDwOJoyyUXnGmeL0t0L6lVleb4cdKSWfZg
