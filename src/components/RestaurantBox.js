@@ -2,58 +2,7 @@ import React from "react";
 import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
 import "./RestaurantBox.css";
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-
-function Anything(props) {
-  return (
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Submit a Review for this Restaurant!
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <Rater rating={0} total={5} />
-        <Form>
-          <Form.Group controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Write your review for this restaurant</Form.Label>
-            <Form.Control as="textarea" rows="2" />
-          </Form.Group>
-        </Form>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.onHide}>Submit</Button>
-      </Modal.Footer>
-    </Modal>
-  );
-}
-
-function RestaurantReview() {
-  const [modalShow, setModalShow] = React.useState(false);
-  return (
-    <>
-      <Button
-        variant="info"
-        onClick={() => setModalShow(true)}
-        className="review-btn"
-      >
-        Submit a new review!
-      </Button>
-
-      <Anything
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
-    </>
-  );
-}
+import AddReviews from "./AddReviews";
 
 function RestaurantBox(props) {
   const boxData = props.data;
@@ -73,7 +22,7 @@ function RestaurantBox(props) {
           />
         </div>
         <div className="review-btn">
-          <RestaurantReview />
+          <AddReviews />
         </div>
       </div>
     );
@@ -109,7 +58,7 @@ function RestaurantBox(props) {
           </div>
         </div>
         <div className="review-btn">
-          <RestaurantReview />
+          <AddReviews />
         </div>
       </div>
     );
