@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
 import "./RestaurantBox.css";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import "./AddReviews.css";
+import "./ShowReviews.css";
 
 function Reviews(props) {
   const [stars, setStars] = useState(0);
@@ -18,14 +18,7 @@ function Reviews(props) {
     setReview(event.target.value);
   }
 
-  //console.log(stars, review);
-  /*
-  const renderReview = () => {
-   
-    );
-  };
-  */
-  
+
   return (
     <Modal
       {...props}
@@ -39,7 +32,7 @@ function Reviews(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Form >
+        <Form>
           <Form.Group controlId="exampleForm.ControlSelect1">
             <Form.Label>Give a rate for this restaurant</Form.Label>
             <Form.Control as="select" onChange={getStars}>
@@ -58,27 +51,35 @@ function Reviews(props) {
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide} >
-          Submit
-        </Button>
-        <ShowReview stars={stars} review={review}/>
+        <Button onClick={props.onHide}>Close</Button>
+        <Button >Submit</Button>
+        <RenderReview stars={stars} review={review} />
       </Modal.Footer>
     </Modal>
   );
 }
 
-function ShowReview(props) {
-    return (
-        <div className="rating">
-          <ul>
-            <li>
-              {" "}
-              <Rater rating={props.stars} total={5} interactive={false} />{" "}
-            </li>
-            <li>Feedback: {props.review}</li>
-          </ul>
-        </div>
-    )
+function ShowReviews() {
+  return (
+    <React.Fragment>
+      <AddReviews />
+      <RenderReview />
+    </React.Fragment>
+  );
+}
+
+function RenderReview(props) {
+  return (
+    <div className="rating">
+      <ul>
+        <li>
+          {" "}
+          <Rater rating={props.stars} total={5} interactive={false} />{" "}
+        </li>
+        <li>Feedback: {props.review}</li>
+      </ul>
+    </div>
+  );
 }
 
 function AddReviews() {
@@ -92,10 +93,9 @@ function AddReviews() {
       >
         Submit a new review!
       </Button>
-        <ShowReview />
       <Reviews show={modalShow} onHide={() => setModalShow(false)} />
     </>
   );
 }
 
-export default AddReviews;
+export default ShowReviews;
