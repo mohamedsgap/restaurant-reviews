@@ -2,7 +2,7 @@ import React from "react";
 import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
 import "./RestaurantBox.css";
-import ShowReviews from "./ShowReviews";
+import AddReviews from "./AddReviews";
 
 function RestaurantBox(props) {
   const boxData = props.data;
@@ -21,8 +21,8 @@ function RestaurantBox(props) {
             alt="restaurant-pic"
           />
         </div>
-        <div className="review-btn">
-          <ShowReviews />
+        <div className="add-reviews">
+          <AddReviews />
         </div>
       </div>
     );
@@ -57,8 +57,8 @@ function RestaurantBox(props) {
             })}
           </div>
         </div>
-        <div className="review-btn">
-          <ShowReviews />
+        <div className="add-reviews">
+          <AddReviews />
         </div>
       </div>
     );

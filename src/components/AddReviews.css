@@ -1,0 +1,25 @@
+ul {
+    list-style: none;
+  }
+
+  .rating {
+    margin-bottom: 65px;
+    margin-left: 200px;
+}
+
+.submit-review {
+  color: white;
+  background-color: teal;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.input-text {
+border-radius: 10px;
+margin-top: 20px;
+
+}
+.select-stars {
+  margin-top: 20px;
+  border-radius: 10px;
+}
