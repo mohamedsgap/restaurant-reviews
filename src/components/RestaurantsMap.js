@@ -78,19 +78,6 @@ function RestaurantsMap(props) {
               <h3 className="restaurant-title">
                 {selectedRestaurant.restaurantName}
               </h3>
-              {selectedRestaurant.ratings.map(rate => (
-                <ul key={Math.random() * 100}>
-                  <li>Feedback: {rate.comment}</li>
-                  <li>
-                    {" "}
-                    <Rater
-                      rating={rate.stars}
-                      total={5}
-                      interactive={false}
-                    />{" "}
-                  </li>
-                </ul>
-              ))}
               <img
                 className="restaurant-image"
                 src={selectedRestaurant.image}
