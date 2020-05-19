@@ -6,16 +6,8 @@
       "lat": 30.7969013,
       "long": 30.9980475,
       "image": "https://img.traveltriangle.com/blog/wp-content/uploads/2019/06/Cover-for-Restaurants-in-Luxor.jpg",
-      "ratings":[
-         {
-            "stars":4,
-            "comment":"Great! But not many veggie options."
-         },
-         {
-            "stars":5,
-            "comment":"My favorite restaurant!"
-         }
-      ]
+      "ratings": 4,
+      "feedback": "Great! But not many veggie options."
    },
    {
       "restaurantName":"Nema",
@@ -24,16 +16,8 @@
       "lat": 30.7966001,
       "long": 30.9975835,
       "image": "https://static.trip101.com/paragraph_media/pictures/001/662/213/large/6493652353_497a9fdbf9_b.jpg?1560852803",
-      "ratings":[
-         {
-            "stars":5,
-            "comment":"Tiny pizzeria next to Sacre Coeur!"
-         },
-         {
-            "stars":3,
-            "comment":"Meh, it was fine."
-         }
-      ]
+      "ratings": 3,
+      "feedback": "Not bad it's fine!"
    },
    {
       "restaurantName":"La polenta ",
@@ -42,16 +26,8 @@
       "lat": 30.7955264,
       "long": 30.997098,
       "image": "https://www.osiristours.com/wp-content/uploads/2018/03/Egyptian_food_Koshary.jpg",
-      "ratings":[
-         {
-            "stars":4,
-            "comment":"So good, but there are better!"
-         },
-         {
-            "stars":3,
-            "comment":"Meh, it was Okay."
-         }
-      ]
+      "ratings": 3,
+      "feedback": "Meh, it was okay"
    },
    {
       "restaurantName":"Teta Crepe",
@@ -60,16 +36,8 @@
       "lat": 30.7947592,
       "long": 30.9972026,
       "image": "https://3.bp.blogspot.com/_jqHZBih7kik/TNHJAWWKGpI/AAAAAAAADaM/wfoNTzapKvU/s1600/Restaurants+in+Cairo.JPG",
-      "ratings":[
-         {
-            "stars":5,
-            "comment":"so so great!"
-         },
-         {
-            "stars":4,
-            "comment":"It was so cool!"
-         }
-      ]
+      "ratings": 5,
+      "feedback": "Great! it was my best"
    },
    {
       "restaurantName":"MiX Crepe",
@@ -78,16 +46,8 @@
       "lat": 30.7940933,
       "long": 30.9974118,
       "image": "https://media-cdn.tripadvisor.com/media/photo-s/11/e7/e4/43/osmanly-restaurant.jpg",
-      "ratings":[
-         {
-            "stars":4,
-            "comment":"Enjoyed my time there!"
-         },
-         {
-            "stars":3,
-            "comment":"Not good as I expected"
-         }
-      ]
+      "ratings": 2,
+      "feedback": "Actually it was a bad one"
    },
    {
       "restaurantName":"Makani",
@@ -96,16 +56,8 @@
       "lat": 30.7918625,
       "long": 30.9987086,
       "image": "https://fastly.4sqi.net/img/general/699x268/WZIVQKQJUJFIAI23PL4XEAHBZWO2Y0AVI3A15W1FOVXL22FD.jpg",
-      "ratings":[
-         {
-            "stars":5,
-            "comment":"it was so amazing!"
-         },
-         {
-            "stars":4,
-            "comment":"So far so good!"
-         }
-      ]
+      "ratings": 5,
+      "feedback": "It was so amzing"
    },
    {
       "restaurantName":"Tiatro",
@@ -114,16 +66,8 @@
       "lat": 30.7913556,
       "long": 30.9983331,
       "image": "https://i.ytimg.com/vi/r0N4VU7q7F8/maxresdefault.jpg",
-      "ratings":[
-         {
-            "stars":3,
-            "comment":"It was fine but not great!"
-         },
-         {
-            "stars":4,
-            "comment":"so so good, I gonna come again"
-         }
-      ]
+      "ratings": 4,
+      "feedback": "it was a nice one!"
    },
    {
       "restaurantName":"Dahab",
@@ -132,16 +76,8 @@
       "lat": 30.7908908,
       "long": 30.9982313,
       "image": "https://img.traveltriangle.com/blog/wp-content/uploads/2019/05/El-Masry1.jpg",
-      "ratings":[
-         {
-            "stars":3,
-            "comment":"Just okay"
-         },
-         {
-            "stars":3,
-            "comment":"Meh, it was fine."
-         }
-      ]
+      "ratings": 3,
+      "feedback": "It was okay!"
    },
    {
       "restaurantName":"Dardasha",
@@ -150,16 +86,8 @@
       "lat": 30.7901117,
       "long": 31.0013737,
       "image": "https://media-cdn.tripadvisor.com/media/photo-s/0a/58/0c/92/al-sahaby-lane-restaurant.jpg",
-      "ratings":[
-         {
-            "stars":5,
-            "comment":"It's really great one!"
-         },
-         {
-            "stars":4,
-            "comment":"So so amzing"
-         }
-      ]
+      "ratings": 5,
+      "feedback": "woow it was so amazing!"
    },
    {
       "restaurantName":"Badaweia",
@@ -168,15 +96,7 @@
       "lat": 30.7898502,
       "long": 30.9992122,
       "image": "https://media-cdn.tripadvisor.com/media/photo-s/11/90/9d/0b/20171221-193956-largejpg.jpg",
-      "ratings":[
-         {
-            "stars":5,
-            "comment":"Wow, it's a cool one!"
-         },
-         {
-            "stars":5,
-            "comment":"Definitely I gonna come next time!"
-         }
-      ]
+      "ratings": 4,
+      "feedback": "Great! it was pretty good"
    }
 ]
