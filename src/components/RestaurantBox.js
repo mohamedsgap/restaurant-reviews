@@ -65,10 +65,23 @@ function RestaurantBox(props) {
   });
 
   return (
-    <div className="sublist">
-      <div>{restaurantBoxData}</div>
-      <div>{restaurantBoxPlaces}</div>
-    </div>
+    <React.Fragment>
+      <div className="filter-restaurants">
+        <label  className="filter-label">Filter the restaurants</label>
+        <select className="select-stars">
+          <option value="0">choose the rating stars!</option>
+          <option value="1">⭐✰✰✰✰</option>
+          <option value="2">⭐⭐✰✰✰</option>
+          <option value="3">⭐⭐⭐✰✰</option>
+          <option value="4">⭐⭐⭐⭐✰</option>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+        </select>
+      </div> 
+      <div className="sublist">
+        <div>{restaurantBoxData}</div>
+        <div>{restaurantBoxPlaces}</div>
+      </div>
+    </React.Fragment>
   );
 }
 
