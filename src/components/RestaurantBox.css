@@ -9,7 +9,7 @@
 }
 
 .sublist {
-  height: 800px;
+  height: 745px;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -30,4 +30,17 @@ ul {
 
 .review {
     padding-bottom: 5px;
+}
+
+.filter-restaurants {
+  color: white;
+  border: thick double yellow;
+  border-radius: 15px;
+  font-size: 20px;
+  background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+}
+
+.filter-label {
+  padding-right: 20px;
+  padding-left: 20px;
 }
