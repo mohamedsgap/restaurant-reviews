@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
 import "./RestaurantBox.css";
@@ -7,6 +7,7 @@ import AddReviews from "./AddReviews";
 function RestaurantBox(props) {
   const boxData = props.data;
   const boxPlaces = props.places;
+  const [starRate, setStarRate] = useState(0);
 
   const restaurantBoxPlaces = boxPlaces.map(place => {
     //let imageURL = `${place.venue.categories[0].icon.prefix}${place.venue.categories[0].icon.suffix}`
@@ -40,21 +41,17 @@ function RestaurantBox(props) {
           />
 
           <div className="rate-section">
-            {restaurant.ratings.map(restRate => {
-              return (
-                <ul key={Math.random() * 100}>
-                  <li>
-                    {" "}
-                    <Rater
-                      rating={restRate.stars}
-                      total={5}
-                      interactive={false}
-                    />{" "}
-                  </li>
-                  <li>Feedback: {restRate.comment}</li>
-                </ul>
-              );
-            })}
+            <ul>
+              <li>
+                {" "}
+                <Rater
+                  rating={restaurant.ratings}
+                  total={5}
+                  interactive={false}
+                />{" "}
+              </li>
+              <li>Feedback: {restaurant.feedback}</li>
+            </ul>
           </div>
         </div>
         <div className="add-reviews">
@@ -64,11 +61,53 @@ function RestaurantBox(props) {
     );
   });
 
+  const getStarRate = event => {
+    setStarRate(Number(event.target.value));
+  };
+
+  const filteredRestaurants = boxData
+    .filter(restaurant => restaurant.ratings === starRate)
+    .map(filteredRestaurant => (
+      <div key={filteredRestaurant.id} className="section">
+        <h3 className="restaurant-title">
+          {filteredRestaurant.restaurantName}
+        </h3>
+        <div className="rest-box">
+          <img
+            className="box-image"
+            src={filteredRestaurant.image}
+            alt="restaurant-pic"
+          />
+
+          <div className="rate-section">
+            <ul>
+              <li>
+                {" "}
+                <Rater
+                  rating={filteredRestaurant.ratings}
+                  total={5}
+                  interactive={false}
+                />{" "}
+              </li>
+              <li>Feedback: {filteredRestaurant.feedback}</li>
+            </ul>
+          </div>
+        </div>
+        <div className="add-reviews">
+          <AddReviews />
+        </div>
+      </div>
+    ));
+
   return (
     <React.Fragment>
       <div className="filter-restaurants">
-        <label  className="filter-label">Filter the restaurants</label>
-        <select className="select-stars">
+        <label className="filter-label">Filter the restaurants</label>
+        <select
+          className="select-stars"
+          value={starRate}
+          onChange={getStarRate}
+        >
           <option value="0">choose the rating stars!</option>
           <option value="1">⭐✰✰✰✰</option>
           <option value="2">⭐⭐✰✰✰</option>
@@ -76,13 +115,12 @@ function RestaurantBox(props) {
           <option value="4">⭐⭐⭐⭐✰</option>
           <option value="5">⭐⭐⭐⭐⭐</option>
         </select>
-      </div> 
+      </div>
       <div className="sublist">
-        <div>{restaurantBoxData}</div>
+        <div>{starRate === 0 ? restaurantBoxData : filteredRestaurants}</div>
         <div>{restaurantBoxPlaces}</div>
       </div>
     </React.Fragment>
   );
 }
-
 export default RestaurantBox;
