@@ -84,7 +84,7 @@ function RestaurantsMap(props) {
             </div>
           </Popup>
         ) : null}
-        <ExtraRestaurants places={props.places} />
+        <ExtraRestaurants gplaces={props.gplaces} />
       </MapGL>
     </div>
   );
