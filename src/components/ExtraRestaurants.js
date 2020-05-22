@@ -2,18 +2,19 @@ import React, { useState } from "react";
 import { Marker, Popup } from "react-map-gl";
 import "./ExtraRestaurants.css";
 import restaurant_marker from "../images/restaurant-marker.png";
+import RestaurantImage from "./RestaurantImage";
 
 function ExtraRestaurants(props) {
-  const restaurantPlaces = props.places;
+  const restaurantPlaces = props.gplaces;
   const [selectedRestaurant, setSelectedRestaurant] = useState(null);
 
   return (
     <div>
       {restaurantPlaces.map(place => (
         <Marker
-          key={place.venue.id}
-          latitude={place.venue.location.lat}
-          longitude={place.venue.location.lng}
+          key={place.id}
+          latitude={place.geometry.location.lat}
+          longitude={place.geometry.location.lng}
         >
           <button
             className="marker"
@@ -28,18 +29,17 @@ function ExtraRestaurants(props) {
       ))}
       {selectedRestaurant ? (
         <Popup
-          latitude={selectedRestaurant.venue.location.lat}
-          longitude={selectedRestaurant.venue.location.lng}
+          latitude={selectedRestaurant.geometry.location.lat}
+          longitude={selectedRestaurant.geometry.location.lng}
           onClose={() => {
             setSelectedRestaurant(null);
           }}
         >
           <div>
-            <h3 className="restaurant-title">
-              {selectedRestaurant.venue.name}
-            </h3>
-            <p>Address: {selectedRestaurant.venue.location.address}</p>
-            <img src={selectedRestaurant.venue.photos} alt="pic" />
+            <h3 className="restaurant-title">{selectedRestaurant.name}</h3>
+            <RestaurantImage
+              imageRef={selectedRestaurant.photos[0].photo_reference}
+            />
           </div>
         </Popup>
       ) : null}
