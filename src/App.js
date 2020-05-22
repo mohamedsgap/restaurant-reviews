@@ -6,11 +6,15 @@ import data from "./utils/restaurantsInfo.json";
 import RestaurantsMap from "./components/RestaurantsMap";
 import RestaurantsList from "./components/RestaurantsList";
 
-const CLIENT_ID = process.env.REACT_APP_CLIENT_ID; 
+const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
+const GKEY_ID = process.env.REACT_APP_HELPER_KEY;
+
+// https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=1500&type=restaurant&keyword=cruise&key=YOUR_API_KEY
 
 function App() {
   const [places, setPlaces] = useState([]);
+  const [gplaces, setGplaces] = useState([]);
 
   useEffect(() => {
     const END_POINT = "https://api.foursquare.com/v2/venues/explore?";
@@ -31,13 +35,30 @@ function App() {
         console.log("ERROR HAS OCURED" + err);
       });
   }, []);
-  console.log(places);
+
+  // try API call for G_Places
+  useEffect(() => {
+    axios
+      .get(
+        `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=30.7970511,30.9987288&radius=7000&type=restaurant&keyword=cruise&key=${GKEY_ID}`
+      )
+      .then(res => {
+        setGplaces(res.data.results);
+      })
+      .catch(err => {
+        console.log("ERROR HAS OCURED" + err);
+      });
+  }, []);
+
+  //console.log(places);
+  console.log(gplaces);
+
   return (
     <div className="App">
       <Header />
       <div className="Restaurants">
-        <RestaurantsMap data={data} places={places} />
-        <RestaurantsList data={data} places={places}/>
+        <RestaurantsMap data={data} places={places} gplaces={gplaces} />
+        <RestaurantsList data={data} places={places} gplaces={gplaces} />
       </div>
     </div>
   );
