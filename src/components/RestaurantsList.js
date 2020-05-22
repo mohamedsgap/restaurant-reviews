@@ -1,6 +1,6 @@
 import React from "react";
 import "./RestaurantsList.css";
-import RestaurantBox from './RestaurantBox'
+import RestaurantBox from "./RestaurantBox";
 
 function RestaurantsList(props) {
   const restaurantsData = props.data;
@@ -16,7 +16,11 @@ function RestaurantsList(props) {
           🍝🍲
         </span>
       </h2>
-     <RestaurantBox data={restaurantsData} places={props.places} />
+      <RestaurantBox
+        data={restaurantsData}
+        places={props.places}
+        gplaces={props.gplaces}
+      />
     </div>
   );
 }
