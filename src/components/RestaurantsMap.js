@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Rater from "react-rater";
 import MapGL, { Marker, NavigationControl, Popup } from "react-map-gl";
 import { MAPBOX_TOKEN } from "../utils/MAPBOX_TOKEN";
 import "mapbox-gl/dist/mapbox-gl.css";
@@ -72,10 +73,16 @@ function RestaurantsMap(props) {
               setSelectedRestaurant(null);
             }}
           >
-            <div>
-              <h3 className="restaurant-title">
-                {selectedRestaurant.restaurantName}
-              </h3>
+            <div className="popup-card">
+              <h3 className="rest-name">{selectedRestaurant.restaurantName}</h3>
+              <p className="rest-rate">
+                Review:{" "}
+                <Rater
+                  rating={selectedRestaurant.ratings}
+                  total={5}
+                  interactive={false}
+                />{" "}
+              </p>
               <img
                 className="restaurant-image"
                 src={selectedRestaurant.image}

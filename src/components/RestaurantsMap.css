@@ -1,24 +1,29 @@
 .map {
-    width: 75%;
-    margin: '0 auto'
+  width: 75%;
+  margin: "0 auto";
 }
-.marker{
-    background: none;
-    border: none;
-    cursor: pointer;
+.marker {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 .marker img {
-    width: 33px;
-    height: 33px;
+  width: 33px;
+  height: 33px;
 }
 .navigation-control {
-    position: absolute;
-    left: 0;
+  position: absolute;
+  left: 0;
 }
 .restaurant-image {
-    width: 350px;
-    height: 200px;
+  width: 350px;
+  height: 200px;
 }
-.restaurant-title {
-    text-align: center;
+
+.rest-name {
+  text-align: center;
+}
+
+.rest-rate {
+  text-align: center;
 }
