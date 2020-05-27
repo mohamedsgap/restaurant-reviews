@@ -8,7 +8,8 @@ import RestaurantImage from "./RestaurantImage";
 function RestaurantBox(props) {
   const boxData = props.data;
   const boxGplaces = props.gplaces;
-  const [starRate, setStarRate] = useState(0);
+  const [fromStars, setFromStars] = useState(0);
+  const [toStars, setToStars] = useState(0);
 
   const restaurantBoxGplaces = boxGplaces.map(restaurant => {
     return (
@@ -71,12 +72,19 @@ function RestaurantBox(props) {
     );
   });
 
-  const getStarRate = event => {
-    setStarRate(Number(event.target.value));
+  const getFromStars = event => {
+    setFromStars(Number(event.target.value));
+  };
+
+  const getToStars = event => {
+    setToStars(Number(event.target.value));
   };
 
   const filteredRestaurants = boxData
-    .filter(restaurant => restaurant.ratings === starRate)
+    .filter(
+      restaurant =>
+        (restaurant.ratings >= fromStars) & (restaurant.ratings <= toStars)
+    )
     .map(filteredRestaurant => (
       <div key={filteredRestaurant.id} className="section">
         <h3 className="restaurant-title">
@@ -110,7 +118,10 @@ function RestaurantBox(props) {
     ));
 
   const filteredGrestaurants = boxGplaces
-    .filter(restaurant => restaurant.rating === starRate)
+    .filter(
+      restaurant =>
+        (restaurant.ratings >= fromStars) & (restaurant.ratings <= toStars)
+    )
     .map(filteredGrestaurant => (
       <div key={filteredGrestaurant.id} className="section">
         <h3 className="restaurant-title">{filteredGrestaurant.name}</h3>
@@ -144,13 +155,21 @@ function RestaurantBox(props) {
   return (
     <React.Fragment>
       <div className="filter-restaurants">
-        <label className="filter-label">Filter the restaurants</label>
+        <label className="filter-label">Filter </label>
         <select
           className="select-stars"
-          value={starRate}
-          onChange={getStarRate}
+          value={fromStars}
+          onChange={getFromStars}
         >
-          <option value="0">choose the rating stars!</option>
+          <option value="0">From</option>
+          <option value="1">⭐✰✰✰✰</option>
+          <option value="2">⭐⭐✰✰✰</option>
+          <option value="3">⭐⭐⭐✰✰</option>
+          <option value="4">⭐⭐⭐⭐✰</option>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+        </select>
+        <select className="select-stars" value={toStars} onChange={getToStars}>
+          <option value="0">To</option>
           <option value="1">⭐✰✰✰✰</option>
           <option value="2">⭐⭐✰✰✰</option>
           <option value="3">⭐⭐⭐✰✰</option>
@@ -159,9 +178,15 @@ function RestaurantBox(props) {
         </select>
       </div>
       <div className="sublist">
-        <div>{starRate === 0 ? restaurantBoxData : filteredRestaurants}</div>
         <div>
-          {starRate === 0 ? restaurantBoxGplaces : filteredGrestaurants}
+          {(fromStars === 0) & (toStars === 0)
+            ? restaurantBoxData
+            : filteredRestaurants}
+        </div>
+        <div>
+          {(fromStars === 0) & (toStars === 0)
+            ? restaurantBoxGplaces
+            : filteredGrestaurants}
         </div>
 
         {/* <div>{restaurantBoxPlaces}</div>*/}
