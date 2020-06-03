@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import data from "./utils/restaurantsInfo.json";
 import RestaurantsMap from "./components/RestaurantsMap";
 import RestaurantsList from "./components/RestaurantsList";
+import FilterRestaurants from "./components/FilterRestaurants";
 
 const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
@@ -58,9 +59,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className="Restaurants">
-        <RestaurantsMap data={data} places={places} gplaces={gplaces} />
-        <RestaurantsList data={data} places={places} gplaces={gplaces} />
+      <div>
+        <FilterRestaurants data={data} places={places} gplaces={gplaces} />
       </div>
     </div>
   );

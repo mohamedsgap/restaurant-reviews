@@ -9,25 +9,54 @@ function ExtraRestaurants(props) {
   const restaurantPlaces = props.gplaces;
   const [selectedRestaurant, setSelectedRestaurant] = useState(null);
 
+  const allMarkers = restaurantPlaces.map(place => (
+    <Marker
+      key={place.id}
+      latitude={place.geometry.location.lat}
+      longitude={place.geometry.location.lng}
+    >
+      <button
+        className="marker"
+        onClick={e => {
+          e.preventDefault();
+          setSelectedRestaurant(place);
+        }}
+      >
+        <img src={restaurant_marker} alt="restaurant marker" />
+      </button>
+    </Marker>
+  ));
+
+  const filteredMarkers = restaurantPlaces
+    .filter(
+      restaurant =>
+        (restaurant.ratings >= props.fromStars) &
+        (restaurant.ratings <= props.toStars)
+    )
+    .map(filteredRestaurant => (
+      <Marker
+        key={filteredRestaurant.id}
+        latitude={filteredRestaurant.geometry.location.lat}
+        longitude={filteredRestaurant.geometry.location.lng}
+      >
+        <button
+          className="marker"
+          onClick={e => {
+            e.preventDefault();
+            setSelectedRestaurant(filteredRestaurant);
+          }}
+        >
+          <img src={restaurant_marker} alt="restaurant marker" />
+        </button>
+      </Marker>
+    ));
+
   return (
     <div>
-      {restaurantPlaces.map(place => (
-        <Marker
-          key={place.id}
-          latitude={place.geometry.location.lat}
-          longitude={place.geometry.location.lng}
-        >
-          <button
-            className="marker"
-            onClick={e => {
-              e.preventDefault();
-              setSelectedRestaurant(place);
-            }}
-          >
-            <img src={restaurant_marker} alt="restaurant marker" />
-          </button>
-        </Marker>
-      ))}
+      {(props.fromStars === 0) & (props.toStars === 0)
+        ? allMarkers
+        : filteredMarkers}
+
       {selectedRestaurant ? (
         <Popup
           latitude={selectedRestaurant.geometry.location.lat}

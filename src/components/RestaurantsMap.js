@@ -15,7 +15,7 @@ function RestaurantsMap(props) {
 
   const [viewport, setViewPort] = useState({
     width: "100%",
-    height: 880,
+    height: 830,
     latitude: 30.7970511,
     longitude: 30.9987288,
     zoom: 14.5
@@ -23,8 +23,51 @@ function RestaurantsMap(props) {
 
   const [selectedRestaurant, setSelectedRestaurant] = useState(null);
 
-  const _onViewportChange = viewport =>
+  const _onViewportChange = viewport => {
     setViewPort({ ...viewport, transitionDuration: 3000 });
+  };
+
+  const allMarkers = restaurantsData.map(restaurant => (
+    <Marker
+      key={restaurant.id}
+      latitude={restaurant.lat}
+      longitude={restaurant.long}
+    >
+      <button
+        className="marker"
+        onClick={e => {
+          e.preventDefault();
+          setSelectedRestaurant(restaurant);
+        }}
+      >
+        <img src={restaurant_position_marker} alt="user-position-marker" />
+      </button>
+    </Marker>
+  ));
+
+  const filteredMarkers = restaurantsData
+    .filter(
+      restaurant =>
+        (restaurant.ratings >= props.fromStars) &
+        (restaurant.ratings <= props.toStars)
+    )
+    .map(filteredRestaurant => (
+      <Marker
+        key={filteredRestaurant.id}
+        latitude={filteredRestaurant.lat}
+        longitude={filteredRestaurant.long}
+      >
+        <button
+          className="marker"
+          onClick={e => {
+            e.preventDefault();
+            setSelectedRestaurant(filteredRestaurant);
+          }}
+        >
+          <img src={restaurant_position_marker} alt="user-position-marker" />
+        </button>
+      </Marker>
+    ));
 
   return (
     <div className="map">
@@ -42,26 +85,9 @@ function RestaurantsMap(props) {
           </button>
         </Marker>
 
-        {restaurantsData.map(restaurant => (
-          <Marker
-            key={restaurant.id}
-            latitude={restaurant.lat}
-            longitude={restaurant.long}
-          >
-            <button
-              className="marker"
-              onClick={e => {
-                e.preventDefault();
-                setSelectedRestaurant(restaurant);
-              }}
-            >
-              <img
-                src={restaurant_position_marker}
-                alt="user-position-marker"
-              />
-            </button>
-          </Marker>
-        ))}
+        {(props.fromStars === 0) & (props.toStars === 0)
+          ? allMarkers
+          : filteredMarkers}
 
         <div className="navigation-control">
           <NavigationControl />
@@ -93,7 +119,11 @@ function RestaurantsMap(props) {
             </div>
           </Popup>
         ) : null}
-        <ExtraRestaurants gplaces={props.gplaces} />
+        <ExtraRestaurants
+          gplaces={props.gplaces}
+          fromStars={props.fromStars}
+          toStars={props.toStars}
+        />
       </InteractiveMap>
     </div>
   );

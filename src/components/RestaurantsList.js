@@ -3,8 +3,6 @@ import "./RestaurantsList.css";
 import RestaurantBox from "./RestaurantBox";
 
 function RestaurantsList(props) {
-  const restaurantsData = props.data;
-
   return (
     <div className="list">
       <h2>
@@ -17,9 +15,10 @@ function RestaurantsList(props) {
         </span>
       </h2>
       <RestaurantBox
-        data={restaurantsData}
-        places={props.places}
+        data={props.data}
         gplaces={props.gplaces}
+        fromStars={props.fromStars}
+        toStars={props.toStars}
       />
     </div>
   );
