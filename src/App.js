@@ -36,6 +36,8 @@ function App() {
       });
   }, []);
 
+  /*
+// comment this API call untill i finished with synce and add run time restaurant
   // try API call for G_Places
   useEffect(() => {
     axios
@@ -49,7 +51,7 @@ function App() {
         console.log("ERROR HAS OCURED" + err);
       });
   }, []);
-
+*/
   //console.log(places);
   console.log(gplaces);
 
