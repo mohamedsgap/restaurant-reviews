@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Rater from "react-rater";
-import MapGL, { Marker, NavigationControl, Popup } from "react-map-gl";
+import InteractiveMap, { Marker, NavigationControl, Popup } from "react-map-gl";
 import { MAPBOX_TOKEN } from "../utils/MAPBOX_TOKEN";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./RestaurantsMap.css";
@@ -18,7 +18,7 @@ function RestaurantsMap(props) {
     height: 880,
     latitude: 30.7970511,
     longitude: 30.9987288,
-    zoom: 16
+    zoom: 14.5
   });
 
   const [selectedRestaurant, setSelectedRestaurant] = useState(null);
@@ -28,11 +28,13 @@ function RestaurantsMap(props) {
 
   return (
     <div className="map">
-      <MapGL
+      <InteractiveMap
         {...viewport}
         mapboxApiAccessToken={TOKEN}
         mapStyle="mapbox://styles/mapbox/dark-v8"
         onViewportChange={_onViewportChange}
+        dragPan={false}
+        doubleClickZoom={false}
       >
         <Marker latitude={30.7970511} longitude={30.9987288}>
           <button className="marker">
@@ -92,7 +94,7 @@ function RestaurantsMap(props) {
           </Popup>
         ) : null}
         <ExtraRestaurants gplaces={props.gplaces} />
-      </MapGL>
+      </InteractiveMap>
     </div>
   );
 }
