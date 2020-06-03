@@ -3,8 +3,6 @@ import axios from "axios";
 import "./App.css";
 import Header from "./components/Header";
 import data from "./utils/restaurantsInfo.json";
-import RestaurantsMap from "./components/RestaurantsMap";
-import RestaurantsList from "./components/RestaurantsList";
 import FilterRestaurants from "./components/FilterRestaurants";
 
 const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
@@ -37,9 +35,7 @@ function App() {
       });
   }, []);
 
-  /*
-// comment this API call untill i finished with synce and add run time restaurant
-  // try API call for G_Places
+  //  API call for G_Places
   useEffect(() => {
     axios
       .get(
@@ -52,9 +48,6 @@ function App() {
         console.log("ERROR HAS OCURED" + err);
       });
   }, []);
-*/
-  //console.log(places);
-  console.log(gplaces);
 
   return (
     <div className="App">
