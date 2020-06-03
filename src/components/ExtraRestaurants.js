@@ -30,8 +30,8 @@ function ExtraRestaurants(props) {
   const filteredMarkers = restaurantPlaces
     .filter(
       restaurant =>
-        (restaurant.ratings >= props.fromStars) &
-        (restaurant.ratings <= props.toStars)
+        (restaurant.rating >= props.fromStars) &
+        (restaurant.rating <= props.toStars)
     )
     .map(filteredRestaurant => (
       <Marker

@@ -111,8 +111,8 @@ function RestaurantBox(props) {
   const filteredGrestaurants = boxGplaces
     .filter(
       restaurant =>
-        (restaurant.ratings >= props.fromStars) &
-        (restaurant.ratings <= props.toStars)
+        (restaurant.rating >= props.fromStars) &
+        (restaurant.rating <= props.toStars)
     )
     .map(filteredGrestaurant => (
       <div key={filteredGrestaurant.id} className="section">
