@@ -2,9 +2,23 @@ import React, { useState } from "react";
 import RestaurantsList from "./RestaurantsList";
 import RestaurantsMap from "./RestaurantsMap";
 import "./FilterRestaurants.css";
+
 const FilterRestaurants = props => {
   const [fromStars, setFromStars] = useState(0);
   const [toStars, setToStars] = useState(0);
+  const [userNewPlaces, setUserNewPlaces] = useState([]);
+
+  const handleClick = e => {
+    setUserNewPlaces(userNewPlaces =>
+      userNewPlaces.concat({
+        location: e.lngLat,
+        name: prompt("Enter the new restaurant name!"),
+        review: prompt("give a review number form 1 to 5 "),
+        img: prompt("Enter restaurant image URL!"),
+        id: Math.random() * 100
+      })
+    );
+  };
 
   const getFromStars = event => {
     setFromStars(Number(event.target.value));
@@ -48,6 +62,8 @@ const FilterRestaurants = props => {
             gplaces={props.gplaces}
             fromStars={fromStars}
             toStars={toStars}
+            userNewPlaces={userNewPlaces}
+            _handleClick={handleClick}
           />
         </div>
         <div className="restaurants-list">
@@ -56,6 +72,7 @@ const FilterRestaurants = props => {
             gplaces={props.gplaces}
             fromStars={fromStars}
             toStars={toStars}
+            userNewPlaces={userNewPlaces}
           />
         </div>
       </div>

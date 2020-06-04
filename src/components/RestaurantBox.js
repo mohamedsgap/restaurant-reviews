@@ -143,7 +143,71 @@ function RestaurantBox(props) {
         </div>
       </div>
     ));
+  const userNewPlaces = props.userNewPlaces.map(restaurant => {
+    return (
+      <div key={restaurant.id} className="section">
+        <h3 className="restaurant-title">{restaurant.name}</h3>
+        <div className="rest-box">
+          <img
+            className="box-image"
+            src={restaurant.img}
+            alt="restaurant-pic"
+          />
 
+          <div className="rate-section">
+            <ul>
+              <li>
+                {" "}
+                <Rater
+                  rating={restaurant.review}
+                  total={5}
+                  interactive={false}
+                />{" "}
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="add-reviews">
+          <AddReviews />
+        </div>
+      </div>
+    );
+  });
+
+  const userNewFilteredPlaces = props.userNewPlaces
+    .filter(
+      restaurant =>
+        (restaurant.review >= props.fromStars) &
+        (restaurant.review <= props.toStars)
+    )
+    .map(filteredRestaurant => (
+      <div key={filteredRestaurant.id} className="section">
+        <h3 className="restaurant-title">{filteredRestaurant.name}</h3>
+        <div className="rest-box">
+          <img
+            className="box-image"
+            src={filteredRestaurant.img}
+            alt="restaurant-pic"
+          />
+
+          <div className="rate-section">
+            <ul>
+              <li>
+                {" "}
+                <Rater
+                  rating={filteredRestaurant.review}
+                  total={5}
+                  interactive={false}
+                />{" "}
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="add-reviews">
+          <AddReviews />
+        </div>
+      </div>
+    ));
   return (
     <React.Fragment>
       <div className="sublist">
@@ -157,8 +221,11 @@ function RestaurantBox(props) {
             ? restaurantBoxGplaces
             : filteredGrestaurants}
         </div>
-
-        {/* <div>{restaurantBoxPlaces}</div>*/}
+        <div>
+          {(props.fromStars === 0) & (props.toStars === 0)
+            ? userNewPlaces
+            : userNewFilteredPlaces}
+        </div>
       </div>
     </React.Fragment>
   );

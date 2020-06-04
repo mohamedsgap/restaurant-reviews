@@ -27,7 +27,7 @@ function AddReviews() {
     setReview("");
     setStars(0);
   }
-  
+
   return (
     <React.Fragment>
       <div className="review">

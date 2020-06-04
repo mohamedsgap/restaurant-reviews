@@ -22,6 +22,7 @@ function RestaurantsMap(props) {
   });
 
   const [selectedRestaurant, setSelectedRestaurant] = useState(null);
+  const [selectedNewRestaurant, setSelectedNewRestaurant] = useState(null);
 
   const _onViewportChange = viewport => {
     setViewPort({ ...viewport, transitionDuration: 3000 });
@@ -69,6 +70,51 @@ function RestaurantsMap(props) {
       </Marker>
     ));
 
+  const userMarkers = props.userNewPlaces.map(place => (
+    <Marker
+      key={place.id}
+      latitude={place.location[1]}
+      longitude={place.location[0]}
+    >
+      <button
+        className="marker"
+        onClick={e => {
+          e.preventDefault();
+          setSelectedNewRestaurant(place);
+        }}
+      >
+        <img
+          src={restaurant_position_marker}
+          alt="restaurant-position-marker"
+        />
+      </button>
+    </Marker>
+  ));
+
+  const userFilteredMarkers = props.userNewPlaces
+    .filter(
+      restaurant =>
+        (restaurant.review >= props.fromStars) &
+        (restaurant.review <= props.toStars)
+    )
+    .map(filteredRestaurant => (
+      <Marker
+        key={filteredRestaurant.id}
+        latitude={filteredRestaurant.location[1]}
+        longitude={filteredRestaurant.location[0]}
+      >
+        <button
+          className="marker"
+          onClick={e => {
+            e.preventDefault();
+            setSelectedNewRestaurant(filteredRestaurant);
+          }}
+        >
+          <img src={restaurant_position_marker} alt="rest-position-marker" />
+        </button>
+      </Marker>
+    ));
+
   return (
     <div className="map">
       <InteractiveMap
@@ -78,6 +124,7 @@ function RestaurantsMap(props) {
         onViewportChange={_onViewportChange}
         dragPan={false}
         doubleClickZoom={false}
+        onDblClick={props._handleClick}
       >
         <Marker latitude={30.7970511} longitude={30.9987288}>
           <button className="marker">
@@ -92,6 +139,37 @@ function RestaurantsMap(props) {
         <div className="navigation-control">
           <NavigationControl />
         </div>
+
+        {(props.fromStars === 0) & (props.toStars === 0)
+          ? userMarkers
+          : userFilteredMarkers}
+
+        {selectedNewRestaurant ? (
+          <Popup
+            latitude={selectedNewRestaurant.location[1]}
+            longitude={selectedNewRestaurant.location[0]}
+            onClose={() => {
+              setSelectedNewRestaurant(null);
+            }}
+          >
+            <div className="popup-card">
+              <h3 className="rest-name">{selectedNewRestaurant.name}</h3>
+              <p className="rest-rate">
+                Review:{" "}
+                <Rater
+                  rating={Number(selectedNewRestaurant.review)}
+                  total={5}
+                  interactive={false}
+                />{" "}
+              </p>
+              <img
+                className="restaurant-image"
+                src={selectedNewRestaurant.img}
+                alt="restaurant-pic"
+              />
+            </div>
+          </Popup>
+        ) : null}
 
         {selectedRestaurant ? (
           <Popup

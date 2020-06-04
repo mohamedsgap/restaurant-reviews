@@ -19,6 +19,7 @@ function RestaurantsList(props) {
         gplaces={props.gplaces}
         fromStars={props.fromStars}
         toStars={props.toStars}
+        userNewPlaces={props.userNewPlaces}
       />
     </div>
   );

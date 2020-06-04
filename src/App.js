@@ -36,6 +36,7 @@ function App() {
   }, []);
 
   //  API call for G_Places
+  /*
   useEffect(() => {
     axios
       .get(
@@ -48,7 +49,7 @@ function App() {
         console.log("ERROR HAS OCURED" + err);
       });
   }, []);
-
+*/
   return (
     <div className="App">
       <Header />
