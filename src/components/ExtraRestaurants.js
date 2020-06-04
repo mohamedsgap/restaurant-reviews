@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Rater from "react-rater";
 import { Marker, Popup } from "react-map-gl";
 import "./ExtraRestaurants.css";
-import restaurant_marker from "../images/restaurant-marker.png";
+import restaurant_marker from "../images/restaurant-position-marker.png";
 import RestaurantImage from "./RestaurantImage";
 
 function ExtraRestaurants(props) {
@@ -75,9 +75,11 @@ function ExtraRestaurants(props) {
                 interactive={false}
               />{" "}
             </p>
-            <RestaurantImage
-              imageRef={selectedRestaurant.photos[0].photo_reference}
-            />
+            <div className="restaurant-image">
+              <RestaurantImage
+                imageRef={selectedRestaurant.photos[0].photo_reference}
+              />
+            </div>
           </div>
         </Popup>
       ) : null}
