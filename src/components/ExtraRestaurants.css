@@ -10,7 +10,7 @@
 .restaurant-title {
   text-align: center;
 }
-.restaurant-image {
-  width: 350px;
+.restaurant-image img {
+  width: 300px;
   height: 200px;
 }

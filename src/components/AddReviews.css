@@ -1,10 +1,10 @@
 ul {
-    list-style: none;
-  }
+  list-style: none;
+}
 
-  .rating {
-    margin-bottom: 65px;
-    margin-left: 200px;
+.rating {
+  margin-bottom: 65px;
+  margin-left: 200px;
 }
 
 .submit-review {
@@ -15,9 +15,8 @@ ul {
 }
 
 .input-text {
-border-radius: 10px;
-margin-top: 20px;
-
+  border-radius: 10px;
+  margin-top: 20px;
 }
 .select-stars {
   margin-top: 20px;

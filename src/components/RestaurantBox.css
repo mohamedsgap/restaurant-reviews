@@ -3,36 +3,6 @@
   overflow-x: hidden;
   overflow-y: auto;
 }
-/*
-.section {
-  margin-top: 10px;
-  padding-top: 10px;
-  color: white;
-  border: thick double yellow;
-  background-color: #de0d79;
-  border-radius: 30px;
-  text-align: center;
-}
-
-ul {
-  list-style: none;
-}
-
-.box-image {
-  width: 150px;
-  height: 125px;
-  border-radius: 33px;
-}
-
-.rest-box {
-  display: flex;
-}
-
-.review {
-  padding-bottom: 5px;
-}
-*/
-
 .section {
   display: flex;
   flex-direction: column;
