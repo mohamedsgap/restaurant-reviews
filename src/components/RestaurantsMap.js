@@ -18,7 +18,7 @@ function RestaurantsMap(props) {
     height: 830,
     latitude: 30.7970511,
     longitude: 30.9987288,
-    zoom: 13
+    zoom: 14
   });
 
   const [selectedRestaurant, setSelectedRestaurant] = useState(null);
@@ -135,10 +135,6 @@ function RestaurantsMap(props) {
         {(props.fromStars === 0) & (props.toStars === 0)
           ? allMarkers
           : filteredMarkers}
-
-        <div className="navigation-control">
-          <NavigationControl />
-        </div>
 
         {(props.fromStars === 0) & (props.toStars === 0)
           ? userMarkers

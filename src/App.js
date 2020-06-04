@@ -34,13 +34,12 @@ function App() {
         console.log("ERROR HAS OCURED" + err);
       });
   }, []);
-
-  //  API call for G_Places
   /*
+  //  API call for G_Places
   useEffect(() => {
     axios
       .get(
-        `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=30.7970511,30.9987288&radius=7000&type=restaurant&keyword=cruise&key=${GKEY_ID}`
+        `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=30.7970511,30.9987288&radius=1500&type=restaurant&keyword=cruise&key=${GKEY_ID}`
       )
       .then(res => {
         setGplaces(res.data.results);
