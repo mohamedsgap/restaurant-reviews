@@ -1,3 +1,9 @@
+.sublist {
+  height: 765px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/*
 .section {
   margin-top: 10px;
   padding-top: 10px;
@@ -6,12 +12,6 @@
   background-color: #de0d79;
   border-radius: 30px;
   text-align: center;
-}
-
-.sublist {
-  height: 765px;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 ul {
@@ -30,4 +30,36 @@ ul {
 
 .review {
   padding-bottom: 5px;
+}
+*/
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  border: thick double yellow;
+  border-radius: 15px;
+  text-align: center;
+  color: aliceblue;
+  /*background-color: #de0d79;*/
+  background-color: #e88b09;
+}
+.restaurant-title {
+  margin-top: 5px;
+}
+
+ul {
+  list-style: none;
+}
+
+.box-image img {
+  width: 600px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.add-reviews {
+  margin-bottom: 10px;
 }

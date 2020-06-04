@@ -1,5 +1,7 @@
 .list {
-  background-color: #fc92c9;
+  /*background-color: #fc92c9;*/
+  /*background-color: #e80965;*/
+  background: linear-gradient(160deg, #e80965 70%, #e88b09 30%);
 }
 
 h2 {

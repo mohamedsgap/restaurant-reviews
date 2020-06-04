@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Rater from "react-rater";
-import InteractiveMap, { Marker, NavigationControl, Popup } from "react-map-gl";
+import InteractiveMap, { Marker, Popup } from "react-map-gl";
 import { MAPBOX_TOKEN } from "../utils/MAPBOX_TOKEN";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./RestaurantsMap.css";
