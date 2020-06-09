@@ -15,7 +15,7 @@ const GKEY_ID = process.env.REACT_APP_HELPER_KEY;
 
 function App() {
   const [gplaces, setGplaces] = useState([]);
-
+  /*
   //  API call for G_Places
   useEffect(() => {
     axios
@@ -29,7 +29,7 @@ function App() {
         console.log("ERROR HAS OCURED" + err);
       });
   }, []);
-
+*/
   return (
     <div className="App">
       <Header />

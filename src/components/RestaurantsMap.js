@@ -151,7 +151,7 @@ function RestaurantsMap(props) {
             <div className="popup-card">
               <h3 className="rest-name">{selectedNewRestaurant.name}</h3>
               <p className="rest-rate">
-                Review:{" "}
+                Rating:{" "}
                 <Rater
                   rating={Number(selectedNewRestaurant.review)}
                   total={5}
@@ -178,7 +178,7 @@ function RestaurantsMap(props) {
             <div className="popup-card">
               <h3 className="rest-name">{selectedRestaurant.restaurantName}</h3>
               <p className="rest-rate">
-                Review:{" "}
+                Rating:{" "}
                 <Rater
                   rating={selectedRestaurant.ratings}
                   total={5}
