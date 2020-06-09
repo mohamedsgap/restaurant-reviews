@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/restaurants-review-site/static/css/main.b9c1139b.chunk.css",
+    "main.js": "/restaurants-review-site/static/js/main.8554b0dc.chunk.js",
+    "main.js.map": "/restaurants-review-site/static/js/main.8554b0dc.chunk.js.map",
+    "runtime-main.js": "/restaurants-review-site/static/js/runtime-main.696c203a.js",
+    "runtime-main.js.map": "/restaurants-review-site/static/js/runtime-main.696c203a.js.map",
+    "static/css/2.d4c1ea23.chunk.css": "/restaurants-review-site/static/css/2.d4c1ea23.chunk.css",
+    "static/js/2.462a50dd.chunk.js": "/restaurants-review-site/static/js/2.462a50dd.chunk.js",
+    "static/js/2.462a50dd.chunk.js.map": "/restaurants-review-site/static/js/2.462a50dd.chunk.js.map",
+    "index.html": "/restaurants-review-site/index.html",
+    "precache-manifest.59973086be4f2e57f4f8c0a97ea8475b.js": "/restaurants-review-site/precache-manifest.59973086be4f2e57f4f8c0a97ea8475b.js",
+    "service-worker.js": "/restaurants-review-site/service-worker.js",
+    "static/css/2.d4c1ea23.chunk.css.map": "/restaurants-review-site/static/css/2.d4c1ea23.chunk.css.map",
+    "static/css/main.b9c1139b.chunk.css.map": "/restaurants-review-site/static/css/main.b9c1139b.chunk.css.map",
+    "static/js/2.462a50dd.chunk.js.LICENSE.txt": "/restaurants-review-site/static/js/2.462a50dd.chunk.js.LICENSE.txt",
+    "static/media/logo.png": "/restaurants-review-site/static/media/logo.e6c189c5.png",
+    "static/media/restaurant-position-marker.png": "/restaurants-review-site/static/media/restaurant-position-marker.4c717ae9.png",
+    "static/media/user-position-marker.png": "/restaurants-review-site/static/media/user-position-marker.972bdb89.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.696c203a.js",
+    "static/css/2.d4c1ea23.chunk.css",
+    "static/js/2.462a50dd.chunk.js",
+    "static/css/main.b9c1139b.chunk.css",
+    "static/js/main.8554b0dc.chunk.js"
+  ]
+}
