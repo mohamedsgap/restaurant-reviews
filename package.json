@@ -1,5 +1,6 @@
 {
-  "name": "restaurant-review-app",
+  "name": "restaurants-review-site",
+  "homepage": "https://www.mohdabdelnasser.live/restaurants-review-site",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,6 +10,7 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "deck.gl": "^8.1.1",
+    "gh-pages": "^3.0.0",
     "mapbox-gl": "^1.9.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
@@ -21,6 +23,8 @@
     "react-sidebar": "^3.0.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
