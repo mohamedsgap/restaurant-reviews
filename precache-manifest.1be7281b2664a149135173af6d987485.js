@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "148691b3559e9cca1f91efbe883b237a",
+    "revision": "dcfbe0d9f561c3cae0711fef69768d56",
     "url": "/restaurants-review-site/index.html"
   },
   {
-    "revision": "73da3e7c4dcf8c24a394",
-    "url": "/restaurants-review-site/static/css/2.d4c1ea23.chunk.css"
+    "revision": "0bfe6d1aea7a9401338d",
+    "url": "/restaurants-review-site/static/css/2.8f8cc498.chunk.css"
   },
   {
-    "revision": "1c76203935c3d9038cd7",
-    "url": "/restaurants-review-site/static/css/main.b10947c4.chunk.css"
+    "revision": "6d692315d88db95f3070",
+    "url": "/restaurants-review-site/static/css/main.82755669.chunk.css"
   },
   {
-    "revision": "73da3e7c4dcf8c24a394",
+    "revision": "0bfe6d1aea7a9401338d",
     "url": "/restaurants-review-site/static/js/2.462a50dd.chunk.js"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/restaurants-review-site/static/js/2.462a50dd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1c76203935c3d9038cd7",
+    "revision": "6d692315d88db95f3070",
     "url": "/restaurants-review-site/static/js/main.8554b0dc.chunk.js"
   },
   {
