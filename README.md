@@ -1,6 +1,6 @@
-# Restaurant Reviews
+# Restaurant Reviews 🍽️
 
-Buit a restaurant reviews app that shows the restaurant around you, it's a full functional app so you can add new restaurants by yourself and submit a new reviews for existing ones, buit with React and it integrates with different APIs.
+Created a fully functional restaurant reviews app with React and Mapbox, allowing users to search for restaurants in their area using Google places API for live data and real time reviews. Users are also able to add new restaurants, and submit new full review feedback.
 
 ## To run the project:
 
@@ -10,11 +10,3 @@ yarn || npm install
 yarn start || npm run start
 
 ```
-
-### Motivation
-
-This my project 7 on OpenClassrooms Frontend Path, so this project for educational purposes!
-
-### Note:
-
-To make the project work in around your current location, you need to change `long`, `lat` values "coordinates" in both `App.js` in the API call, and in `RestaurantsMap.js`, and it gonna work completelly fine with you
