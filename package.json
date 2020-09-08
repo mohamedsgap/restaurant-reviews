@@ -21,7 +21,8 @@
     "react-map-gl-geocoder": "^2.0.11",
     "react-rater": "^5.1.1",
     "react-scripts": "3.4.1",
-    "react-sidebar": "^3.0.2"
+    "react-sidebar": "^3.0.2",
+    "use-position": "^0.0.7"
   },
   "scripts": {
     "predeploy": "npm run build",
