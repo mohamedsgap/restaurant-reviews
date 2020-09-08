@@ -16,6 +16,7 @@
     "react-bootstrap": "^1.0.0",
     "react-bootstrap-sidebar": "^0.0.1",
     "react-dom": "^16.13.1",
+    "react-hook-geolocation": "^1.0.6",
     "react-map-gl": "^5.2.3",
     "react-map-gl-geocoder": "^2.0.11",
     "react-rater": "^5.1.1",
