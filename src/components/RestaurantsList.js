@@ -15,8 +15,7 @@ function RestaurantsList(props) {
         </span>
       </h2>
       <RestaurantBox
-        data={props.data}
-        gplaces={props.gplaces}
+        places={props.places}
         fromStars={props.fromStars}
         toStars={props.toStars}
         userNewPlaces={props.userNewPlaces}
