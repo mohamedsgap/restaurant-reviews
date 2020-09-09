@@ -24,11 +24,14 @@ ul {
 }
 
 .box-image img {
-  width: 600px;
-  height: 200px;
   border-radius: 10px;
 }
 
 .add-reviews {
   margin-bottom: 10px;
+}
+
+.box-image {
+  width: 200px;
+  height: 200px;
 }
