@@ -16,8 +16,6 @@ function RestaurantsList(props) {
       </h2>
       <RestaurantBox
         places={props.places}
-        fromStars={props.fromStars}
-        toStars={props.toStars}
         userNewPlaces={props.userNewPlaces}
       />
     </div>
