@@ -10,3 +10,8 @@ yarn || npm install
 yarn start || npm run start
 
 ```
+
+**_There are `TWO` branches for this respository_**
+
+- `Master Branch`: In this branch I use Mapbox with Foursquare API.
+- `OC Branch`: In this branch I used Google Places API.
