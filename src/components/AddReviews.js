@@ -17,15 +17,19 @@ function AddReviews() {
   }
 
   function addReview() {
-    setFullReview(fullReview =>
-      fullReview.concat({
-        text: review,
-        star: stars,
-        id: Math.random() * 100
-      })
-    );
-    setReview("");
-    setStars(0);
+    if (stars === 0 || review === "") {
+      alert("You should submit a real feedback review");
+    } else {
+      setFullReview((fullReview) =>
+        fullReview.concat({
+          text: review,
+          star: stars,
+          id: Math.random() * 100,
+        })
+      );
+      setReview("");
+      setStars(0);
+    }
   }
 
   return (
