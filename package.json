@@ -1,6 +1,6 @@
 {
-  "name": "restaurants-review-site",
-  "homepage": "https://www.mohdabdelnasser.live/restaurants-review-site",
+  "name": "restaurant-reviews",
+  "homepage": "https://www.mohdabdelnasser.live/restaurant-reviews",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
