@@ -1,7 +1,6 @@
 .sublist {
-  height: 765px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
+  height: 100vh;
 }
 .section {
   display: flex;
@@ -10,10 +9,10 @@
   flex-wrap: wrap;
   width: 100%;
   border: thick double yellow;
-  border-radius: 15px;
   text-align: center;
   color: aliceblue;
-  background-color: #6600cc;
+  background-color: #42aaf5;
+  margin-top: 10px;
 }
 .restaurant-title {
   margin-top: 5px;

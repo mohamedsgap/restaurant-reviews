@@ -5,11 +5,11 @@ import RestaurantBox from "./RestaurantBox";
 function RestaurantsList(props) {
   return (
     <div className="list">
-      <h2>
+      <h2 className="list-title">
         <span role="img" aria-label="food emoji">
           🥞🍛
         </span>{" "}
-        Restaurants List{" "}
+        Restaurant Lists{" "}
         <span role="img" aria-label="food emoji">
           🍝🍲
         </span>
