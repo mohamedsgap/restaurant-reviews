@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Marker, Popup } from "react-map-gl";
 import "./ExtraRestaurants.css";
 import restaurant_marker from "../images/restaurant-position-marker.png";
-import restaurantLogo from "../images/restaurants-logo.jpg";
+import bestRestLogo from "../images/bestRestLogo.png";
 
 function ExtraRestaurants(props) {
   const restaurantPlaces = props.places;
@@ -42,7 +42,7 @@ function ExtraRestaurants(props) {
             <p>Address: {selectedRestaurant.venue.location.address}</p>
             <img
               className="restaurantLogo"
-              src={restaurantLogo}
+              src={bestRestLogo}
               alt="restaurnt logo"
             />
           </div>
