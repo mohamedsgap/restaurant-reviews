@@ -6,7 +6,7 @@ import AddReviews from "./AddReviews";
 
 function RestaurantBox(props) {
   const boxPlaces = props.places;
-  console.log("boxPlaces " + boxPlaces);
+  //console.log("boxPlaces " + boxPlaces);
   const restaurantBoxPlaces = boxPlaces.map((place) => {
     //let imageURL = `${place.venue.categories[0].icon.prefix}${place.venue.categories[0].icon.suffix}`
     return (

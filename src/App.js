@@ -39,7 +39,7 @@ function App() {
     }
   }, []);
 
-  console.log(places);
+  //console.log(places);
   return (
     <div className="App">
       <Header />
