@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "979a582358c4f0b670e2c07a1f02c10c",
+    "revision": "a65775f0faa5b5dd91e74f107db7ed7f",
     "url": "/restaurant-reviews/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/restaurant-reviews/static/css/2.b02cd404.chunk.css"
   },
   {
-    "revision": "56d59e56b02128dd202c",
+    "revision": "c70c5c24b34ae0066a84",
     "url": "/restaurant-reviews/static/css/main.d223309b.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/restaurant-reviews/static/js/2.4077be6b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "56d59e56b02128dd202c",
-    "url": "/restaurant-reviews/static/js/main.1a393bae.chunk.js"
+    "revision": "c70c5c24b34ae0066a84",
+    "url": "/restaurant-reviews/static/js/main.2f0be275.chunk.js"
   },
   {
     "revision": "6f30038d1a9cebc847a4",
