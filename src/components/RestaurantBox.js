@@ -1,8 +1,8 @@
 import React from "react";
 import "./RestaurantBox.css";
 import AddReviews from "./AddReviews";
-import RestaurantImage from "./RestaurantImage";
-import restaurantLogo from "../images/restaurants-logo.jpg";
+//import RestaurantImage from "./RestaurantImage";
+//import restaurantLogo from "../images/restaurants-logo.jpg";
 
 function RestaurantBox(props) {
   const boxPlaces = props.places;
