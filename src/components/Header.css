@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  background-color: #1a1918;
+  background-color: #f5428c;
   height: 100px;
 }
 
@@ -12,4 +12,11 @@ h1 {
 img {
   margin: 20px;
   float: left;
+}
+
+@media only screen and (max-width: 450px) {
+  #header-title {
+    font-size: 20px;
+    padding-top: 40px;
+  }
 }

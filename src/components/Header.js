@@ -13,7 +13,7 @@ function Header() {
           height="70"
           className="app-logo"
         />
-        <h1>Restaurant Reviews</h1>
+        <h1 id="header-title">Restaurant Reviews</h1>
       </header>
     </div>
   );
